@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda Isis</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Tienda Isis</h1>
+</header>
+
+<div class="container">
+  <!-- Categoría: Granos Básicos -->
+  <div class="category">
+    <h2>Granos Básicos</h2>
+    
+    <div class="brand-section">
+      <h3>Diana</h3>
+      <div class="products">
+        <div class="product" onclick="showVariants('arroz-diana')">
+          <img src="/api/placeholder/150/150" alt="Arroz Diana">
+          <p>Arroz Diana</p>
+          <p>Desde $1.50/lb</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="brand-section">
+      <h3>San Francisco</h3>
+      <div class="products">
+        <div class="product" onclick="showVariants('arroz-san-francisco')">
+          <img src="/api/placeholder/150/150" alt="Arroz San Francisco">
+          <p>Arroz San Francisco</p>
+          <p>Desde $1.25/lb</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Categoría: Productos de Limpieza -->
+  <div class="category">
+    <h2>Productos de Limpieza</h2>
+    
+    <div class="brand-section">
+      <h3>Azistín</h3>
+      <div class="products">
+        <div class="product" onclick="showVariants('azistin')">
+          <img src="/api/placeholder/150/150" alt="Azistín">
+          <p>Azistín</p>
+          <p>Desde $2.30</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Variantes -->
+  <div id="variants-modal" class="variants-modal">
+    <div class="variants-content">
+      <span class="close-modal" onclick="closeVariants()">&times;</span>
+      <h3 id="variant-title">Variantes del Producto</h3>
+      <div id="variants-container"></div>
+    </div>
+  </div>
+
+  <!-- Carrito -->
+  <div class="cart">
+    <h3>Carrito</h3>
+    <div id="cart-items"></div>
+    <p>Total: $<span id="cart-total">0.00</span></p>
+    <button onclick="clearCart()">Vaciar Carrito</button>
+  </div>
+
+  <!-- Formulario -->
+  <div class="form-container">
+    <h2>Datos del Pedido</h2>
+    <input type="text" id="store-name" placeholder="Nombre de la tienda">
+    <input type="text" id="owner-name" placeholder="Nombre del dueño">
+    <select id="zone">
+      <option value="La Futura">La Futura</option>
+      <option value="El Tikal">El Tikal</option>
+    </select>
+    <button onclick="sendToWhatsApp()">Enviar Pedido</button>
+  </div>
+</div>
+
+<footer>
+  <p>Tienda Isis &copy; 2025</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
