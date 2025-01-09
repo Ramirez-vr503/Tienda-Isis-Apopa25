@@ -5,7 +5,7 @@ const productVariants = {
   'arroz-diana': {
     name: 'Arroz Diana',
     variants: [
-      { id: 1, name: 'Arroz Diana Precocido', price: 1.50, image: '/api/placeholder/60/60' },
+      { id: 1, name: 'Arroz Diana Precocido', price: 2.50, image: '/api/placeholder/60/60' },
       { id: 2, name: 'Arroz Diana Premium', price: 1.75, image: '/api/placeholder/60/60' },
       { id: 3, name: 'Arroz Diana Integral', price: 2.00, image: '/api/placeholder/60/60' }
     ]
